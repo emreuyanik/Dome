@@ -95,6 +95,13 @@ console.log(document.querySelector("ul li:nth-child(4)").innerText)
 //* ========================================
 
 const itemLists = document.querySelectorAll("section.item-list li")
-console.log(itemLists);
+console.log(itemLists) //? NodeList(5) [li.list, li.list, li.list, li.list, li.list]
+
+//* querySelectorAll bir nodelist dondurur. Nodelist dahali olarak forEach metmodunu barindirir. Ama istenirse spread veya Array.from() ile yine Array'e donusum yapilabilir.
 
 itemLists.forEach((li) => console.log(li))
+
+//? alternatif iterasyon
+for (let li of itemLists) {
+  console.log(li)
+}
